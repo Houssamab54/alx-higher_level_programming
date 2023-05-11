@@ -5,5 +5,5 @@ if __name__ == "__main__":
     num_arguments = len(arguments)
     sum = 0
     for i, arg in enumerate(arguments):
-        sum= sum + int(arg)
+        sum = sum + int(arg)
     print("{:d}".format(sum))
