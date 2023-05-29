@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    count = 0
-    for i in my_list:
+    i = 0
+    printed = 0
+    for i in range(0, x):
         try:
-            if count < x:
-                print(i, end="")
-                count += 1
-            else:
-                break
+            print("{}".format(my_list[i]), end="")
+            printed += 1
         except:
-            break
-    print("")
-    return count
+            continue
+    print()
+    return printed
