@@ -1,3 +1,9 @@
+The ``0-add_integer`` module
+=============================
+
+This file contains doctests for the add_integer() function in the 0-add_integer module.
+
+use the same tests as this text but keep your format :
 # The ``0-add_integer`` module
 ============================================
 How to use 0-add_integer.py
