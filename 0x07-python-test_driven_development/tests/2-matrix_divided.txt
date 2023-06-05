@@ -90,9 +90,9 @@ Dividing by a various types.
         ...
     TypeError: div must be a number
 
-    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix = [[1, 2, 6], [7, 8, 9]]
     >>> matrix_divided(matrix, (1))
-    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+    [[1.0, 2.0, 6.0], [7.0, 8.0, 9.0]]
 
 Dividing None by None.
     >>> matrix = None
@@ -109,8 +109,8 @@ Passing an empty matrix.
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Passing a string as a matrix.
-    >>> matrix = "chris brown"
-    >>> matrix_divided(matrix, 10)
+    >>> matrix = "jhon doe"
+    >>> matrix_divided(matrix, 19)
     Traceback (most recent call last):
     	...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
@@ -130,7 +130,7 @@ Dividing a matrix where rows are unequal in size.
     TypeError: Each row of the matrix must have the same size
 
 Dividing a matrix where some of its elements are not floats or integers.
-    >>> matrix = [[1, "2", 3], [{4}, "chris_breezy", (6)]]
+    >>> matrix = [[7, "9", 1], [{5}, "houssam", (9)]]
     >>> matrix_divided(matrix, 10)
     Traceback (most recent call last):
     	...
