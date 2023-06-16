@@ -18,6 +18,12 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        """custom __str__ method for Rectangle"""
+        return "[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
+                                                self.id, self.x, self.y,
+                                                self.width, self.height)
+
     @property
     def width(self):
         """
@@ -89,8 +95,8 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-        
-    def area(self):
+
+        def area(self):
         """
         Public method that returns the area of the rectangle.
         """
