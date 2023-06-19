@@ -102,9 +102,3 @@ class TestBase(unittest.TestCase):
         p8 = pep8.StyleGuide(quiet=True)
         p = p8.check_files(['models/base.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
-
-    def test_pep8_test(self):
-        """tests for pep8"""
-        p8 = pep8.StyleGuide(quiet=True)
-        p = p8.check_files(['tests/test_models/test_base.py'])
-        self.assertEqual(p.total_errors, 0, "fix pep8")

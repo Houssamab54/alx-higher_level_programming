@@ -65,7 +65,7 @@ class Base:
             list_instances = []
             for i in range(len(a_list)):
                 list_instances.append(cls.create(**a_list[i]))
-        except:
+        except ValueError:
             list_instances = []
 
         return list_instances
