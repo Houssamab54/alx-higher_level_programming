@@ -23,3 +23,33 @@ class Square(Rectangle):
         """string def"""
         return "[{:s}] ({:d}) {:d}/{:d} - {:d}".format(
             type(self).__name__, self.id, self.x, self.y, self.width)
+
+    def update(self, *args, **kwargs):
+        """Updates the attributes of the squar"""
+        if args:
+            if len(args) > 0:
+                self.id = args[0]
+            if len(args) > 1:
+                self.size = args[1]
+            if len(args) > 2:
+                self.x = args[2]
+            if len(args) > 3:
+                self.y = args[3]
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        """create dictionary representation of a square"""
+        a_dict = {"id": 0, "size": 0, "x": 0, "y": 0}
+        for key in a_dict:
+            if key == "id":
+                a_dict[key] = self.id
+            elif key == "size":
+                a_dict[key] = self.width
+                a_dict[key] = self.height
+            elif key == "x":
+                a_dict[key] = self.x
+            elif key == "y":
+                a_dict[key] = self.y
+        return a_dict
